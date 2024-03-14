@@ -18,8 +18,8 @@ mycursor = mydb.cursor()
 mycursor.execute("CREATE TABLE IF NOT EXISTS farmers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), mobile VARCHAR(15), email VARCHAR(255), address TEXT, state VARCHAR(255), district VARCHAR(255), block VARCHAR(255), village VARCHAR(255), age INT, gender VARCHAR(10), qualification VARCHAR(255), land_holding VARCHAR(255), language VARCHAR(255), sms_mode VARCHAR(255), sector VARCHAR(255), soil_type VARCHAR(255), category VARCHAR(255), crop VARCHAR(255))")
 
 # Twilio credentials
-account_sid = 'AC47cec984684f6fcabb523a844b06dee6'
-auth_token = '4af1390f28595e21e8fa2638dd70bb07'
+account_sid = 'ACe7130832b10df0561404c83af0a021d8'
+auth_token = 'e8a788ce63dba6912e7ed8e810138a4b'
 client = Client(account_sid, auth_token)
 
 @app.route('/')
@@ -56,8 +56,8 @@ def submit():
         mydb.commit()
 
         # Send a sample weather message
-        message = ""
-        client.messages.create(body=message, from_='+16149454183', to="+91"+mobile)
+        message = "The weather is sunny,warm,low humidity and irrigation recommendation is do the sprinkler irrigation "
+        client.messages.create(body=message, from_='+17179253303', to=mobile)
 
         return redirect(url_for('home'))
 
