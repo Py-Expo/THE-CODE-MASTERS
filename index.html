@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration Form</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+                max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        color: #666;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    select {
+        cursor: pointer;
+    }
+    
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .field-validation-valid {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        color: #ff6347; /* red color */
+    }
+    
+</style>
+</head>
+<body>
+    <h1>Farmer Registration Form</h1>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="mobile">Mobile:</label><br>
+        <input type="tel" id="mobile" name="mobile" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" required></textarea><br>
+        
+        <label for="state">State:</label><br>
+        <select type="text" id="state" name="state" required>
+            <option value="1">Tamil Nadu</option></select><br>
+        
+        <label for="district">District:</label><br>
+        <select id="district" type="text" name="district" required>
+            <option value="1">Coimbatore</option>     
+        </select><br>
+        
+        <label for="block">Block:</label><br>
+        <select type="text" id="block" name="block" required >
+                                        <option value="1">Annur</option>
+                                        <option value="2">Karamadai</option>
+                                        <option value="3">Kinathukadavu</option>
+                                        <option value="4">Perianaickenpalayam</option>
+                                        <option value="5">Pollachi North</option>
+                                        <option value="6">Pollachi South</option>
+                                        <option value="7">Sarkarsamakulam</option>
+                                        <option value="8"> Sulthanpettai</option>
+                                        <option value="9">Sulur</option>
+                                        <option value="10">Thondamuthur</option>
+                                        <option value="11">Palladam</option                                <option value="19">Harur</option>
+                                        <option value="12">Anamalai </option>
+
+            
+        </select><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Transgender">Transgender</option>
+        </select><br>
+        
+        <label for="qualification">Qualification:</label><br>
+        <select type="text" id="qualification" name="qualification" required>
+        <option value="">Select :</option>
+        <option value="Illiterate">Illiterate</option>
+        <option value="Semi-literate">Semi-literate</option>
+        <option value="Primary">Primary</option>
+        <option value="Middle">Middle</option>
+        <option value="10th/12th">10th/12th</option>
+        <option value="Graduate">Graduate</option>
+    </select>
+<br>
+        
+        <label for="land_holding">Land Holding:</label><br>
+        <select type="text" id="land_holding" name="land_holding" required>
+        <option selected="selected"  value="">Select :</option>
+                <option value="<1 Hectare">&lt;1 Hectare</option>
+                <option value="1 Hectare">1 Hectare</option>
+                                    </select>
+<br>
+        
+        <label for="language">Language:</label><br>
+        <select type="text" id="language" name="language" required>
+            <option value="">Select :</option>
+            <option value="English">English</option>
+        </select>
+    <br>
+        
+        <label for="sms_mode">SMS Mode:</label><br>
+        <select type="text" id="sms_mode" name="sms_mode" required>
+            <option value="">Select :</option>
+            <option value="text">Text</option>
+        </select>
+    <br>
+        
+        <label for="sector">Sector:</label><br>
+        <select type="text" id="sector" name="sector" required>
+            <option value="Agriculture">Agriculture</option></select><br>
+        
+        <label for="soil_type">Soil Type:</label><br>
+        <select type="text" id="soil_type" name="soil_type" required>
+            <option selected="selected" value="1">Red Loam/ Soil</option>
+            <option value="2">Clay Loam</option>
+                                            <option value="3">Saline Coastal</option>
+                                            <option value="4">Alluviam</option>
+                                            <option value="5">Non Calcareous Red</option>
+                                            <option value="6">Non Calcareous Brown</option>
+                                            <option value="7">Calcareous Black</option>
+                                            <option value="8">Black Soil</option>
+                                            <option value="9">Deep Red Loam</option>
+                                            <option value="10">Lateritic Soil</option>
+                                        </select>
+<br>
+        
+        <label for="category">Category:</label><br>
+        <select type="text" id="category" name="category" required>
+        <option selected="selected" value="1">Fruits</option>
+        <option selected="selected" value="2">Vegetables</option>
+        <option selected="selected" value="3">Potato varieties</option>
+</select><br>
+        
+        <label for="crop">Crop:</label><br>
+        <select type="text" id="crop" name="crop" required>
+            <option selected="selected" value="1">Mango</option>
+<option selected="selected" value="2">Banana</option>
+<option selected="selected" value="3">Grapes</option>
+<option selected="selected" value="4">Guava</option>
+<option selected="selected" value="5">Lime</option>
+<option selected="selected" value="6">Gooseberry</option>
+<option selected="selected" value="7">Papaya</option>
+<option selected="selected" value="8">onion</option>
+<option selected="selected" value="9">Garlic</option>
+<option selected="selected" value="10">Brinjal</option>
+<option selected="selected" value="11">Lady'sfinger</option>
+<option selected="selected" value="12">Green chili</option>
+<option selected="selected" value="13">Drum stick</option>
+<option selected="selected" value="14">Cabbage</option>
+<option selected="selected" value="15">Beans/Peas</option>
+<option selected="selected" value="16">Tapioca</option>
+<option selected="selected" value="17">Potato</option>
+<option selected="selected" value="18">Sweet Potato</option>
+</select>
+<br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
